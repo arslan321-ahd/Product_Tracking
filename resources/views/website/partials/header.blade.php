@@ -6,8 +6,8 @@
                     class="logo" alt="Tracking.my Logo">
             </a>
         </div>
-        <a class="btn btn-primary me-2 d-none d-lg-block" href="/send-parcel">
-            <i class="fas fa-box pe-1"></i> Send Parcel
+        <a class="btn btn-primary me-2 d-none d-lg-block" href="/contact-us" aria-label="Contact Us">
+            <i class="fas fa-phone-laptop pe-1"></i> Contact Us
         </a>
 
 
@@ -15,100 +15,6 @@
             data-bs-toggle="dropdown" aria-expanded="false" aria-label="Products">
             <i class="fas fa-phone-laptop"></i>
         </button>
-        <button class="btn btn-light me-2 dropdown-toggle d-none d-lg-block" type="button" id="dropdownMenuProductPc"
-            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Products">
-            <i class="fas fa-phone-laptop"></i> Products
-        </button>
-        <div class="dropdown-product dropdown-menu dropdown-menu-end p-3"
-            aria-labelledby="dropdownMenuProduct dropdownMenuProductPc">
-            <h6>Products</h6>
-            <div class="row g-2">
-                <div class="col-4">
-                    <a href="/" data-bs-toggle="modal" data-bs-target="#trackingFormModal">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/track-parcel.png.webp">
-                        Track Parcel
-                    </a>
-                </div>
-                <div class="col-4">
-                    <a href="/mobile-app">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/mobile-app.png.webp">
-                        Mobile App
-                    </a>
-                </div>
-
-                <div class="col-4">
-                    <a href="/seller-platform">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/seller-platform.png.webp">
-                        Seller Platform
-                    </a>
-                </div>
-                <div class="col-4">
-                    <a href="/tracking-page">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/tracking-page.png.webp">
-                        Tracking Page
-                    </a>
-                </div>
-                <div class="col-4">
-                    <a href="/send-parcel">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/send-parcel.png.webp">
-                        Send Parcel
-                    </a>
-                </div>
-                <div class="col-4">
-                    <a href="/insurance-protection">
-                        <img class="lazyload" style="width: 90px;"
-                            data-src="https://mytrackcdn.com/images/navs/insurance-protection.png.webp">
-                        insurance
-                    </a>
-                </div>
-            </div>
-
-            <h6>Developer tools</h6>
-            <div class="row g-2">
-                <div class="col-4">
-                    <a href="/track-button">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/track-button.png.webp">
-                        Track Button
-                    </a>
-                </div>
-                <div class="col-4">
-                    <a href="/tracking-api">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/tracking-api.png.webp">
-                        Tracking API
-                    </a>
-                </div>
-            </div>
-            <h6>Integrations</h6>
-            <div class="row g-1 no-hover">
-                <div class="col">
-                    <a href="/integration/woocommerce" data-bs-toggle="tooltip" title="WooCommerce">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/woocommerce.png.webp">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="/integration/easystore" data-bs-toggle="tooltip" title="EasyStore">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/easystore.png.webp">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="/integration/newpages" data-bs-toggle="tooltip" title="NewPages">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/newpages.png.webp">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="/integration/sitegiant" data-bs-toggle="tooltip" title="SiteGiant">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/sitegiant.png.webp">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="/integration/new" data-bs-toggle="tooltip" title="Welcome Request">
-                        <img class="lazyload" data-src="https://mytrackcdn.com/images/navs/new-integration.png.webp">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
         <button class="btn btn-white d-static d-lg-none" type="button" id="dropdownMenuLocale"
             data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
             <i class="fas fa-globe"></i>

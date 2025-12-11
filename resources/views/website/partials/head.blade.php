@@ -77,6 +77,19 @@
             width: 100% !important;
         }
     </style>
+    <style>
+        .career-title {
+            font-size: 80px;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+    </style>
+    </style>
+    <style>
+        body {
+            background-color: transparent !important;
+        }
+    </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2JKTLS0K9"></script>
     <script>
