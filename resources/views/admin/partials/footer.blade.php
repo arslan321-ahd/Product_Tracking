@@ -1,0 +1,8 @@
+<!-- Start - Footer -->
+<div class="footer">
+    <div class="copyright text-center">
+        <p class="mb-0">Copyright © Developed by <a href="https://dexignzone.com/" target="_blank">DexignZone</a> <span
+                class="current-year">2025</span></p>
+    </div>
+</div>
+<!-- End - Footer -->
