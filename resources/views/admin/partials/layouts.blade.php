@@ -1,28 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" data-startbar="dark" data-bs-theme="light">
     @include('admin.partials.head')
     <body>
-       <!-- Start - Preloader -->
-	<div id="preloader">
-		<div class="lds-ripple">
-			<div></div>
-			<div></div>
-		</div>
-	</div>
-	<!-- End - Preloader -->
-     <!-- Start - Main Wrapper -->
-	<div id="main-wrapper">
-        @include('admin.partials.navbar') 
-        @include('admin.partials.sidebar')
-        <!-- Start - Content Body -->
-		<main class="content-body">
-            @yield('content')
-        </main>
-        <!-- End - Content Body -->
-        @include('admin.partials.footer')
-    </div>
-    <!-- End - Main Wrapper -->
-    @include('admin.partials.scripts')
-</body>
+            @include('admin.partials.navbar') 
+            @include('admin.partials.sidebar')
+           <div class="page-wrapper">
+              <div class="page-content">
+                 @yield('content')
+                 @include('admin.partials.footer')
+              </div>
+            </div>
+        @include('admin.partials.scripts')
+   </body>
 </html>
 
