@@ -34,7 +34,7 @@ class CourierController extends Controller
 
         Courier::create($validated);
 
-        return redirect()->back()->with('success', 'Company information saved successfully.');
+        return redirect('/courier')->with('success', 'Company information saved successfully.');
     }
     public function index()
     {
@@ -42,17 +42,23 @@ class CourierController extends Controller
     }
     public function data()
     {
-        $couriers = Courier::query();
-        console . log($couriers);
-        return DataTables::of($couriers)
+        return DataTables::of(
+            Courier::select([
+                'id',
+                'company_name',
+                'company_logo',
+                'website_link',
+                'email',
+                'contact_number'
+            ])
+        )
             ->editColumn('company_logo', function ($row) {
-                if ($row->company_logo) {
-                    return '<img src="' . asset('storage/' . $row->company_logo) . '" width="50">';
-                }
-                return '—';
+                return $row->company_logo
+                    ? '<img src="' . asset('storage/' . $row->company_logo) . '" width="40" loading="lazy">'
+                    : '—';
             })
             ->editColumn('website_link', function ($row) {
-                return '<a href="' . $row->website_link . '" target="_blank">' . $row->website_link . '</a>';
+                return '<a href="' . $row->website_link . '" target="_blank" rel="noopener">' . $row->website_link . '</a>';
             })
             ->rawColumns(['company_logo', 'website_link'])
             ->make(true);

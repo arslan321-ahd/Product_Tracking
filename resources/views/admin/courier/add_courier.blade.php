@@ -8,15 +8,15 @@
                     <div class="">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item"><a href="#">Approx</a>
-                            </li><!--end nav-item-->
+                            </li>
                             <li class="breadcrumb-item"><a href="#">Forms</a>
-                            </li><!--end nav-item-->
+                            </li>
                             <li class="breadcrumb-item active">Validation</li>
                         </ol>
                     </div>
                 </div><!--end page-title-box-->
-            </div><!--end col-->
-        </div><!--end row-->
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">

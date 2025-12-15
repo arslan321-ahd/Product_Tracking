@@ -1,7 +1,22 @@
 @extends('admin.partials.layouts')
-
 @section('content')
     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+                    <h4 class="page-title">Validation</h4>
+                    <div class="">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#">Approx</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">Forms</a>
+                            </li>
+                            <li class="breadcrumb-item active">Validation</li>
+                        </ol>
+                    </div>
+                </div><!--end page-title-box-->
+            </div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="card">
@@ -10,7 +25,7 @@
                     </div>
                     <div class="card-body pt-0">
                         <div class="table-responsive">
-                            <table class="table datatable" id="couriersTable">
+                            <table class="table" id="couriersTable">
                                 <thead class="table-light">
                                     <tr>
                                         <th>Company Name</th>
@@ -27,34 +42,22 @@
             </div>
         </div>
     </div>
-@endsection
-
-@push('scripts')
-    <!-- 1. jQuery -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- 2. DataTables -->
-    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-
-    <!-- 3. Bootstrap 5 adapter -->
-    <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
-
-    <!-- Optional -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <script>
         $(function() {
             $('#couriersTable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ url('companies/data') }}",
+                deferRender: true,
+                pageLength: 10,
+                ajax: "{{ route('companies.data') }}",
                 columns: [{
                         data: 'company_name',
                         name: 'company_name'
                     },
                     {
                         data: 'company_logo',
-                        name: 'company_logo',
                         orderable: false,
                         searchable: false
                     },
@@ -74,4 +77,4 @@
             });
         });
     </script>
-@endpush
+@endsection

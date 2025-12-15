@@ -21,5 +21,5 @@ Route::view('/admin-layouts', 'admin.partials.layouts');
 Route::view('/admin-dashboard', 'admin.dashboard');
 Route::get('/add-courier', [CourierController::class, 'create']);
 Route::post('/companies/store', [CourierController::class, 'store'])->name('companies.store');
-Route::get('all-courier', [CourierController::class, 'index'])->name('companies.index');
-Route::get('companies/data', [CourierController::class, 'data']);
+Route::get('/courier', [CourierController::class, 'index']);
+Route::get('/companies/data', [CourierController::class, 'data'])->name('companies.data');
