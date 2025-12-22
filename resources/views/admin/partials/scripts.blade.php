@@ -9,5 +9,7 @@
 <script src="{{ asset('admin/assets/js/pages/index.init.js') }}"></script>
 <script src="{{ asset('admin/assets/js/DynamicSelect.js') }}"></script>
 <script src="{{ asset('admin/assets/js/app.js') }}"></script>
+<script src="{{ asset('admin/assets/libs/quill/quill.js') }}"></script>
+<script src="{{ asset('admin/assets/js/pages/form-editor.init.js') }}"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/2.3.5/css/dataTables.dataTables.css" />
 <script src="https://cdn.datatables.net/2.3.5/js/dataTables.js"></script>

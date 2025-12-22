@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CourierController;
+use App\Http\Controllers\Admin\TermController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,3 +27,6 @@ Route::get('/companies/data', [CourierController::class, 'data'])->name('compani
 Route::delete('/courier/{id}', [CourierController::class, 'destroy'])->name('courier.destroy');
 Route::get('/courier/{id}/edit', [CourierController::class, 'edit'])->name('courier.edit');
 Route::put('/courier/{id}', [CourierController::class, 'update'])->name('courier.update');
+// terms Routes
+Route::get('/admin-term', [TermController::class, 'create'])->name('terms.create');
+Route::post('/terms/store', [TermController::class, 'store'])->name('terms.store');
