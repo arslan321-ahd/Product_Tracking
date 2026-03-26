@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('website_link')->nullable();
             $table->string('email')->unique();
             $table->string('contact_number');
+            $table->text('company_description')->nullable();
+            $table->string('slug')->unique()->nullable();
             $table->timestamps();
         });
     }

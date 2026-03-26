@@ -24,16 +24,10 @@
                      </li>
 
                      <li class="nav-item">
-                         <a class="nav-link" href="">
+                         <a class="nav-link" href="{{url('/admin-dashboard')}}">
                              <i class="iconoir-report-columns menu-icon"></i>
                              <span>Dashboard</span>
                              <span class="badge text-bg-info ms-auto">New</span>
-                         </a>
-                     </li><!--end nav-item-->
-                     <li class="nav-item">
-                         <a class="nav-link" href="payment.html">
-                             <i class="iconoir-hand-cash menu-icon"></i>
-                             <span>Payment</span>
                          </a>
                      </li><!--end nav-item-->
                      <li class="nav-item">
@@ -53,12 +47,22 @@
                              </ul><!--end nav-->
                          </div><!--end startbarTables-->
                      </li><!--end nav-item-->
-                     <li class="nav-item">
-                         <a class="nav-link" href="cards.html">
-                             <i class="iconoir-credit-cards menu-icon"></i>
-                             <span>Cards</span>
-                             <span class="badge text-bg-pink ms-auto">03</span>
+                      <li class="nav-item">
+                         <a class="nav-link" href="#sidebarTransactions" data-bs-toggle="collapse" role="button"
+                             aria-expanded="false" aria-controls="sidebarTransactions">
+                             <i class="iconoir-task-list menu-icon"></i>
+                             <span>Terms</span>
                          </a>
+                         <div class="collapse " id="sidebarTransactions">
+                             <ul class="nav flex-column">
+                                 <li class="nav-item">
+                                     <a class="nav-link" href="{{url('/admin-term')}}">Add Terms</a>
+                                 </li><!--end nav-item-->
+                                 <li class="nav-item">
+                                     <a class="nav-link" href="{{url('/admin-terms')}}">All Terms</a>
+                                 </li><!--end nav-item-->
+                             </ul><!--end nav-->
+                         </div><!--end startbarTables-->
                      </li><!--end nav-item-->
                      <li class="nav-item">
                          <a class="nav-link" href="taxes.html">

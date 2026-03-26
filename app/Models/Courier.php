@@ -14,5 +14,7 @@ class Courier extends Model
         'website_link',
         'email',
         'contact_number',
+        'company_description',
+        'slug',
     ];
 }
