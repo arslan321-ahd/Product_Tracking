@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::middleware('auth')->group(function () {
 // admin Routs
 Route::view('/admin-layouts', 'admin.partials.layouts');
 Route::view('/admin-dashboard', 'admin.dashboard');
@@ -32,18 +33,19 @@ Route::view('/contact-us', 'website.contact_us');
 Route::view('/careers', 'website.careers');
 Route::view('/privacy', 'website.privacy');
 Route::view('/product-details', 'website.product_details');
-// Route::view('/product-track', 'website.product_track');
+    // Route::view('/product-track', 'website.product_track');
 
 
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::put('/password-update', [ProfileController::class, 'updatePassword'])->name('password.update');
+});
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+
 
 require __DIR__ . '/auth.php';
 

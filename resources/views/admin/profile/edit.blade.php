@@ -59,7 +59,62 @@
 
                     </div>
                 </div>
+                {{-- Password Update Section --}}
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h4 class="card-title">Update Password</h4>
+                    </div>
 
+                    <div class="card-body">
+
+                        @if (session('status') === 'password-updated')
+                            <div class="alert alert-success">
+                                Password updated successfully.
+                            </div>
+                        @endif
+
+                        <form method="POST" action="{{ route('password.update') }}">
+                            @csrf
+                            @method('PUT')
+
+                            <div class="row">
+
+                                {{-- Current Password --}}
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label">Current Password</label>
+                                    <input type="password" name="current_password" class="form-control">
+
+                                    @error('current_password')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                {{-- New Password --}}
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">New Password</label>
+                                    <input type="password" name="password" class="form-control">
+
+                                    @error('password')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                {{-- Confirm Password --}}
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Confirm Password</label>
+                                    <input type="password" name="password_confirmation" class="form-control">
+                                </div>
+
+                            </div>
+
+                            <button class="btn btn-primary">
+                                Update Password
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>

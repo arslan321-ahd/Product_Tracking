@@ -48,12 +48,12 @@
                          </div><!--end startbarTables-->
                      </li><!--end nav-item-->
                       <li class="nav-item">
-                         <a class="nav-link" href="#sidebarTransactions" data-bs-toggle="collapse" role="button"
+                         <a class="nav-link" href="#sidebarElements" data-bs-toggle="collapse" role="button"
                              aria-expanded="false" aria-controls="sidebarTransactions">
                              <i class="iconoir-task-list menu-icon"></i>
                              <span>Terms</span>
                          </a>
-                         <div class="collapse " id="sidebarTransactions">
+                         <div class="collapse " id="sidebarElements">
                              <ul class="nav flex-column">
                                  <li class="nav-item">
                                      <a class="nav-link" href="{{url('/admin-term')}}">Add Terms</a>
@@ -64,18 +64,12 @@
                              </ul><!--end nav-->
                          </div><!--end startbarTables-->
                      </li><!--end nav-item-->
-                     <li class="nav-item">
+                     {{-- <li class="nav-item">
                          <a class="nav-link" href="taxes.html">
                              <i class="iconoir-plug-type-l menu-icon"></i>
                              <span>Texes</span>
                          </a>
-                     </li><!--end nav-item-->
-                     <li class="nav-item">
-                         <a class="nav-link" href="users.html">
-                             <i class="iconoir-group menu-icon"></i>
-                             <span>Users</span>
-                         </a>
-                     </li><!--end nav-item-->
+                     </li><!--end nav-item--> --}}
                  </ul><!--end navbar-nav--->
              </div>
          </div><!--end startbar-collapse-->
